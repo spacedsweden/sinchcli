@@ -19,7 +19,7 @@ $ npm install -g sinchcli
 $ sinch COMMAND
 running command...
 $ sinch (-v|--version|version)
-sinchcli/0.3.0 win32-x64 node-v10.15.0
+sinchcli/0.4.0 win32-x64 node-v10.15.0
 $ sinch --help [COMMAND]
 USAGE
   $ sinch COMMAND
@@ -51,7 +51,7 @@ EXAMPLE
   creates a sms verification
 ```
 
-_See code: [src\commands\SendVerification.ts](https://github.com/spacedsweden/SinchCLI/blob/v0.3.0/src\commands\SendVerification.ts)_
+_See code: [src\commands\SendVerification.ts](https://github.com/spacedsweden/SinchCLI/blob/v0.4.0/src\commands\SendVerification.ts)_
 
 ## `sinch hello [FILE]`
 
@@ -71,7 +71,7 @@ EXAMPLE
   hello world from ./src/hello.ts!
 ```
 
-_See code: [src\commands\hello.ts](https://github.com/spacedsweden/SinchCLI/blob/v0.3.0/src\commands\hello.ts)_
+_See code: [src\commands\hello.ts](https://github.com/spacedsweden/SinchCLI/blob/v0.4.0/src\commands\hello.ts)_
 
 ## `sinch help [COMMAND]`
 
