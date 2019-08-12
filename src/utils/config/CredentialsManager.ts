@@ -4,12 +4,21 @@ const emoji = require('node-emoji');
 const chalk = require('chalk');
 const path = require('path');
 const fs = require('fs-extra');
-
+class Credentials {
+    
+    constructor(appkey:string, appsecret:string) {
+    this.ApplicationKey=  appkey;
+this.ApplicationSecret = appsecret
+ }
+ ApplicationKey = "";
+ ApplicationSecret = "";
+}
 export default class CredentialsManager
 {
-    async credentials(ctx) {
-        const config = path.join(ctx.config.configDir, 'config.json');
     
+    public async GetCredentials(pathToConfig:string) : Promise<Credentials> {
+        const config = path.join(pathToConfig, 'config.json');
+        console.log(config);
         try {
             if (!(await fs.pathExists(config))) {
                 await fs.outputJson(config, {
@@ -18,8 +27,9 @@ export default class CredentialsManager
                 });
             }
     
-            const { applicationKey, applicationSecret } = await fs.readJson(config);
+            let { applicationKey, applicationSecret } = await fs.readJson(config);
     
+
             if (!applicationKey || !applicationSecret) {
                 console.warn(
                     `Credentials not found. Run the command ${chalk.bold(
@@ -27,16 +37,18 @@ export default class CredentialsManager
                     )} .`,
                     emoji.get('warning')
                 );
-    
-                ctx.exit(0);
+               
+                
             }
     
-            return { applicationKey, applicationSecret };
+            return new Credentials(applicationKey , applicationSecret 
+                );
         } catch (error) {
-            ctx.error(error || 'A sinch CLI error has occurred.', {
+            error(error || 'A sinch CLI error has occurred.', {
                 exit: 1,
             });
         }
+        return new Credentials("", "");
     }
 }
 
