@@ -19,7 +19,7 @@ $ npm install -g @spacedsweden/sinchcli
 $ sinch COMMAND
 running command...
 $ sinch (-v|--version|version)
-@spacedsweden/sinchcli/0.4.0 win32-x64 node-v10.15.0
+@spacedsweden/sinchcli/0.5.0 win32-x64 node-v10.15.0
 $ sinch --help [COMMAND]
 USAGE
   $ sinch COMMAND
@@ -51,7 +51,7 @@ EXAMPLE
   hello world from ./src/hello.ts!
 ```
 
-_See code: [src\commands\hello.ts](https://github.com/spacedsweden/SinchCLI/blob/v0.4.0/src\commands\hello.ts)_
+_See code: [src\commands\hello.ts](https://github.com/spacedsweden/SinchCLI/blob/v0.5.0/src\commands\hello.ts)_
 
 ## `sinch help [COMMAND]`
 
@@ -82,7 +82,7 @@ EXAMPLE
   $ sinch login
 ```
 
-_See code: [src\commands\login.ts](https://github.com/spacedsweden/SinchCLI/blob/v0.4.0/src\commands\login.ts)_
+_See code: [src\commands\login.ts](https://github.com/spacedsweden/SinchCLI/blob/v0.5.0/src\commands\login.ts)_
 
 ## `sinch sendVerification`
 
@@ -103,5 +103,5 @@ EXAMPLE
   creates a sms verification
 ```
 
-_See code: [src\commands\sendVerification.ts](https://github.com/spacedsweden/SinchCLI/blob/v0.4.0/src\commands\sendVerification.ts)_
+_See code: [src\commands\sendVerification.ts](https://github.com/spacedsweden/SinchCLI/blob/v0.5.0/src\commands\sendVerification.ts)_
 <!-- commandsstop -->
