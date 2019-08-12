@@ -1,7 +1,7 @@
 {
   "name": "@spacedsweden/sinchcli",
   "description": "Sinch CLI for interacting with our APIs",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "author": "Christian Jensen @spacedsweden",
   "bin": {
     "sinch": "./bin/run"
