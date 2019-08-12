@@ -15,11 +15,11 @@ Sinch CLI for interacting with our APIs
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g sinchcli
+$ npm install -g @spacedsweden/sinchcli
 $ sinch COMMAND
 running command...
 $ sinch (-v|--version|version)
-sinchcli/0.4.0 win32-x64 node-v10.15.0
+@spacedsweden/sinchcli/0.4.0 win32-x64 node-v10.15.0
 $ sinch --help [COMMAND]
 USAGE
   $ sinch COMMAND
@@ -28,30 +28,10 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`sinch SendVerification`](#sinch-sendverification)
 * [`sinch hello [FILE]`](#sinch-hello-file)
 * [`sinch help [COMMAND]`](#sinch-help-command)
-
-## `sinch SendVerification`
-
-Send an SMS verification
-
-```
-USAGE
-  $ sinch SendVerification
-
-OPTIONS
-  -f, --force
-  -h, --help                     show CLI help
-  -p, --phoneNumber=phoneNumber  phonenumber to send a verification to
-  --version                      show CLI version
-
-EXAMPLE
-  $ sinch sendSMSVerification
-  creates a sms verification
-```
-
-_See code: [src\commands\SendVerification.ts](https://github.com/spacedsweden/SinchCLI/blob/v0.4.0/src\commands\SendVerification.ts)_
+* [`sinch login`](#sinch-login)
+* [`sinch sendVerification`](#sinch-sendverification)
 
 ## `sinch hello [FILE]`
 
@@ -89,4 +69,39 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.0/src\commands\help.ts)_
+
+## `sinch login`
+
+Use this to configure your sinch CLI
+
+```
+USAGE
+  $ sinch login
+
+EXAMPLE
+  $ sinch login
+```
+
+_See code: [src\commands\login.ts](https://github.com/spacedsweden/SinchCLI/blob/v0.4.0/src\commands\login.ts)_
+
+## `sinch sendVerification`
+
+Send an SMS verification
+
+```
+USAGE
+  $ sinch sendVerification
+
+OPTIONS
+  -h, --help                                      show CLI help
+  -p, --phoneNumber=phoneNumber                   Phone number to send a verification to
+  -t, --verificationType=(sms|flashcall|callout)  Type of Verification to run
+  --version                                       show CLI version
+
+EXAMPLE
+  $ sinch sendSMSVerification
+  creates a sms verification
+```
+
+_See code: [src\commands\sendVerification.ts](https://github.com/spacedsweden/SinchCLI/blob/v0.4.0/src\commands\sendVerification.ts)_
 <!-- commandsstop -->
