@@ -58,6 +58,7 @@
     "commands": "./lib/commands",
     "bin": "sinch",
     "plugins": [
+      "@oclif/plugin-autocomplete",
       "@oclif/plugin-help"
     ]
   },
