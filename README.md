@@ -19,7 +19,7 @@ $ npm install -g @spacedsweden/sinchcli
 $ sinch COMMAND
 running command...
 $ sinch (-v|--version|version)
-@spacedsweden/sinchcli/0.6.0 win32-x64 node-v10.15.0
+@spacedsweden/sinchcli/0.6.1 win32-x64 node-v10.15.0
 $ sinch --help [COMMAND]
 USAGE
   $ sinch COMMAND
@@ -28,10 +28,34 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`sinch autocomplete [SHELL]`](#sinch-autocomplete-shell)
 * [`sinch hello [FILE]`](#sinch-hello-file)
 * [`sinch help [COMMAND]`](#sinch-help-command)
 * [`sinch login`](#sinch-login)
 * [`sinch sendVerification`](#sinch-sendverification)
+
+## `sinch autocomplete [SHELL]`
+
+display autocomplete installation instructions
+
+```
+USAGE
+  $ sinch autocomplete [SHELL]
+
+ARGUMENTS
+  SHELL  shell type
+
+OPTIONS
+  -r, --refresh-cache  Refresh cache (ignores displaying instructions)
+
+EXAMPLES
+  $ sinch autocomplete
+  $ sinch autocomplete bash
+  $ sinch autocomplete zsh
+  $ sinch autocomplete --refresh-cache
+```
+
+_See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/v0.1.3/src\commands\autocomplete\index.ts)_
 
 ## `sinch hello [FILE]`
 
@@ -51,7 +75,7 @@ EXAMPLE
   hello world from ./src/hello.ts!
 ```
 
-_See code: [src\commands\hello.ts](https://github.com/spacedsweden/SinchCLI/blob/v0.6.0/src\commands\hello.ts)_
+_See code: [src\commands\hello.ts](https://github.com/spacedsweden/SinchCLI/blob/v0.6.1/src\commands\hello.ts)_
 
 ## `sinch help [COMMAND]`
 
@@ -82,7 +106,7 @@ EXAMPLE
   $ sinch login
 ```
 
-_See code: [src\commands\login.ts](https://github.com/spacedsweden/SinchCLI/blob/v0.6.0/src\commands\login.ts)_
+_See code: [src\commands\login.ts](https://github.com/spacedsweden/SinchCLI/blob/v0.6.1/src\commands\login.ts)_
 
 ## `sinch sendVerification`
 
@@ -103,5 +127,5 @@ EXAMPLE
   creates a sms verification
 ```
 
-_See code: [src\commands\sendVerification.ts](https://github.com/spacedsweden/SinchCLI/blob/v0.6.0/src\commands\sendVerification.ts)_
+_See code: [src\commands\sendVerification.ts](https://github.com/spacedsweden/SinchCLI/blob/v0.6.1/src\commands\sendVerification.ts)_
 <!-- commandsstop -->
